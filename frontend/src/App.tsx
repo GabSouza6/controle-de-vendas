@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <div>Controle de Vendas</div>
+      <div className="text-amber-300">Controle de Vendas</div>
     </>
   );
 }
