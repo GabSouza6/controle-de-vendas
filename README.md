@@ -1,73 +1,36 @@
-# React + TypeScript + Vite
+# Controle de Vendas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema web para controle e gerenciamento de vendas, com o objetivo de acompanhar a quantidade de vendas de cada vendedor, organizado por cidade.
 
-Currently, two official plugins are available:
+## Stack do Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Frontend:** React, TypeScript, Tailwind CSS, Vite  
+**Backend:** em definição
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Tela de login
+- Dashboard com visão geral por cidade
+- Listagem de vendedores por cidade
+- Cadastro de vendedor
+- Atualizar saldo do vendedor
 
-## Expanding the ESLint configuration
+## Estrutura de Pastas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+controle-de-vendas/
+├── frontend/
+│   └── src/
+│       ├── components/
+│       │   ├── AtualizarSaldo/
+│       │   ├── CardEstatistica/
+│       │   ├── Header/
+│       │   ├── Sidebar/
+│       │   └── TabelaVendedores/
+│       └── pages/
+│           ├── CadastrarVendedor/
+│           ├── Dashboard/
+│           ├── Login/
+│           └── Vendedores/
+└── backend/
 ```
