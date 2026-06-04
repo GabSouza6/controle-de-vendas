@@ -1,9 +1,9 @@
+import SideBar from "./components/Sidebar/SideBar";
+
 function App() {
   return (
-    <>
-      <div className="text-amber-300">Controle de Vendas</div>
-    </>
-  );
+    <SideBar></SideBar>
+  )
 }
 
 export default App;
