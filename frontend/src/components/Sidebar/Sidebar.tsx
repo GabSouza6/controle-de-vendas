@@ -5,37 +5,37 @@ import iconVendedores from "../../assets/vendedores.svg";
 
 const SideBar = () => {
   return (
-    <aside className="flex flex-col h-screen w-64 px-4 py-6 border-r border-gray-200 bg-gray-50">
+    <aside className="flex flex-col h-screen w-56 px-4 py-6 border-r border-gray-200 bg-gray-100">
       <div className="px-3">
-        <span className="font-semibold">
+        <span className="font-semibold text-sm">
           Controle de <span className="text-green-500">Vendas</span>
         </span>
       </div>
 
-      <nav className="flex flex-col flex-1 mt-8 gap-2">
+      <nav className="flex flex-col flex-1 mt-6 gap-1">
         <a
           href="#"
-          className="flex items-center gap-2 p-3 rounded-lg text-sm text-gray-600 hover:bg-green-100 hover:text-green-600"
+          className="flex items-center gap-2 p-2 rounded-lg text-xs text-gray-600 hover:bg-green-100 hover:text-green-600"
         >
-          <img src={iconDashboard} alt="Ícone Dashboard" className="w-5 h-5" />
+          <img src={iconDashboard} alt="Ícone Dashboard" className="w-4 h-4" />
           Dashboard
         </a>
         <a
           href="#"
-          className="flex items-center gap-2 p-3 rounded-lg text-sm text-gray-600 hover:bg-green-100 hover:text-green-600"
+          className="flex items-center gap-2 p-2 rounded-lg text-xs text-gray-600 hover:bg-green-100 hover:text-green-600"
         >
           <img
             src={iconVendedores}
             alt="Ícone Vendedores"
-            className="w-5 h-5"
+            className="w-4 h-4"
           />
           Vendedores
         </a>
       </nav>
 
       <div className=" pt-4 cursor-pointer">
-        <div className="flex items-center gap-2 px-3 py-2 border border-gray-200 rounded-md text-sm text-gray-600 hover:bg-gray-50">
-          <img src={iconSair} alt="Icone de Sair" className="w-4 h-4" />
+        <div className="flex items-center gap-2 px-3 py-1.5 border border-gray-200 rounded-md text-xs text-gray-600 hover:bg-gray-50">
+          <img src={iconSair} alt="Icone de Sair" className="w-3.5 h-3.5" />
           <span>Sair</span>
         </div>
 

@@ -1,8 +1,8 @@
-import SideBar from "./components/Sidebar/SideBar";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (
-    <SideBar></SideBar>
+    <Login />
   )
 }
 
