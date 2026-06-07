@@ -18,7 +18,7 @@ const SideBar = () => {
 
   return (
     <aside className="hidden md:flex flex-col w-64 bg-gray-100 border-r border-gray-200 px-4 py-6 min-h-screen">
-      <div className="flex flex-col gap-8 h-full">
+      <div className="flex flex-col gap-8 flex-1">
         <div>
           <div className="px-2 mb-8">
             <span className="font-bold text-base tracking-tight">

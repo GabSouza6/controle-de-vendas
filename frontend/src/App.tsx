@@ -1,9 +1,8 @@
-import Dashboard from "./pages/Dashboard/Dashboard";
-
+import Vendedores from "./pages/Vendedores/Vendedores";
 
 function App() {
   return (
-    <Dashboard></Dashboard>
+    <Vendedores/>
   )
 }
 
