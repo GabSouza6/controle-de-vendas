@@ -10,18 +10,20 @@ const Vendedores = () => {
         <header className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-2xl font-bold text-gray-800">Vendedores</h1>
-            <p className="text-sm text-gray-500">Gerencie os vendedores cadastrados</p>
+            <p className="text-sm text-gray-500">
+              Gerencie os vendedores cadastrados
+            </p>
           </div>
           <button className=" bg-green-500 hover:bg-green-600 text-white text-sm font-medium px-4 py-2 rounded-lg cursor-pointer">
             + Cadastrar Vendedor
           </button>
         </header>
 
-        <div className="flex items-center gap-4 mb-6">
+        <div className="flex items-center mb-6 gap-2 md:flex-row flex-col">
           <input
             type="text"
             placeholder="Buscar vendedor por nome ou código"
-            className="w-96 border border-gray-200 rounded-lg px-4 py-2 text-sm outline-none hover:border-gray-500 "
+            className="w-full md:w-96 border border-gray-200 rounded-lg px-4 py-2 text-sm outline-none hover:border-gray-500"
           />
 
           <div className="flex items-center gap-2">
@@ -36,10 +38,9 @@ const Vendedores = () => {
         </div>
 
         <TabelaVendedores />
-
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Vendedores
+export default Vendedores;

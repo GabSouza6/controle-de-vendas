@@ -7,54 +7,49 @@ const SideBar = () => {
   const NavLink = ({ icon, text }: { icon: string; text: string }) => (
     <a
       href="#"
-      className="flex items-center gap-3 p-2 rounded-lg text-xs text-gray-600 hover:bg-green-100 hover:text-green-600 transition-colors"
+      className="flex items-center gap-3 p-3 rounded-lg text-sm text-gray-600 hover:bg-green-100 hover:text-green-600 transition-colors"
     >
-      <div className="w-8 flex justify-center">
-        <img src={icon} alt={`Ícone ${text}`} className="w-4 h-4" />
-      </div>
+      <img src={icon} alt={`Ícone ${text}`} className="w-5 h-5" />
       {text}
     </a>
   );
 
   return (
-    <aside className="hidden md:flex flex-col w-64 bg-gray-100 border-r border-gray-200 px-4 py-6 min-h-screen">
-      <div className="flex flex-col gap-8 flex-1">
-        <div>
-          <div className="px-2 mb-8">
-            <span className="font-bold text-base tracking-tight">
-              Controle de <span className="text-green-500">Vendas</span>
-            </span>
-          </div>
+    <aside className="hidden md:flex flex-col w-64 bg-gray-100 border-r border-gray-200 h-screen sticky top-0">
+      <div className="flex flex-col h-full p-6">
+        <header className="mb-8 px-2">
+          <span className="font-bold text-base tracking-tight">
+            Controle de <span className="text-green-500">Vendas</span>
+          </span>
+        </header>
 
-          <nav className="flex flex-col gap-1">
-            <NavLink icon={iconDashboard} text="Dashboard" />
-            <NavLink icon={iconVendedores} text="Vendedores" />
-          </nav>
-        </div>
+        <nav className="flex-1 flex flex-col gap-2">
+          <NavLink icon={iconDashboard} text="Dashboard" />
+          <NavLink icon={iconVendedores} text="Vendedores" />
+        </nav>
 
-        <div className="mt-auto flex flex-col gap-4 pt-6 border-t border-gray-200">
-          {/* Sair */}
-          <div className="flex items-center gap-3 p-2 text-xs text-gray-600 hover:text-black cursor-pointer transition-colors">
-            <div className="w-8 flex justify-center">
-              <img src={iconSair} alt="Icone de Sair" className="w-4 h-4" />
-            </div>
+        <footer className="flex flex-col gap-4 pt-6 border-t border-gray-200">
+          <button className="flex items-center gap-3 p-2 text-xs text-gray-600 hover:text-red-600 transition-colors cursor-pointer">
+            <img src={iconSair} alt="Sair" className="w-4 h-4" />
             <span>Sair</span>
-          </div>
+          </button>
 
-          {/* Perfil */}
           <div className="flex items-center gap-3 p-2">
-            <div className="w-8 flex justify-center">
-              <img
-                src={iconUser}
-                alt="Icone de perfil"
-                className="w-8 h-8 p-1.5 rounded-full bg-green-100"
-              />
+            <img
+              src={iconUser}
+              alt="Perfil"
+              className="w-8 h-8 p-1.5 rounded-full bg-green-100 border border-green-200"
+            />
+            <div className="flex flex-col overflow-hidden">
+              <span className="text-xs font-medium text-gray-800">
+                Nome do Usuário
+              </span>
+              <span className="text-[10px] text-gray-500">
+                usuario@exemplo.com
+              </span>
             </div>
-            <span className="text-xs text-gray-800 font-medium truncate">
-              usuario@exemplo.com
-            </span>
           </div>
-        </div>
+        </footer>
       </div>
     </aside>
   );
