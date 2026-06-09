@@ -1,4 +1,5 @@
 import SideBar from "../../components/Sidebar/SideBar";
+import TabelaVendedores from "../../components/TabelaVendedores/TabelaVendedores";
 
 const Vendedores = () => {
   return (
@@ -34,7 +35,7 @@ const Vendedores = () => {
           </div>
         </div>
 
-        {/* TabelaVendedores vai aqui */}
+        <TabelaVendedores />
 
       </main>
     </div>
