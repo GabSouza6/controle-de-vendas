@@ -1,0 +1,77 @@
+import SideBar from "../../components/Sidebar/SideBar";
+
+const CadastrarVendedor = () => {
+  return (
+    <div className="flex min-h-screen bg-gray-50">
+      <SideBar />
+
+      <main className="flex-1 p-8">
+        <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-800 transition-colors cursor-pointer mb-6">
+          <img src="/src/assets/arrow-left.svg" className="w-4 h-4" />
+          Voltar
+        </button>
+
+        <header className="mb-6">
+          <h1 className="text-2xl font-bold text-gray-800">
+            Cadastrar Vendedor
+          </h1>
+          <p className="text-sm text-gray-500">
+            Preencha os dados do novo vendedor
+          </p>
+        </header>
+
+        <div className="flex flex-col gap-4 w-full max-w-md">
+          <div className="flex flex-col gap-1">
+            <label htmlFor="nome" className="text-sm font-medium text-gray-700">
+              Nome
+            </label>
+            <input
+              type="text"
+              id="nome"
+              placeholder="Nome completo"
+              className="flex-1 bg-gray-100 border border-gray-200 rounded-lg px-4 py-2 text-sm outline-none"
+            />
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <label htmlFor="telefone" className="text-sm font-medium text-gray-700">
+              Telefone
+            </label>
+            <input
+              type="text"
+              id="telefone"
+              placeholder="(00) 00000-0000"
+              className="flex-1 bg-gray-100 border border-gray-200 rounded-lg px-4 py-2 text-sm outline-none"
+            />
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <label htmlFor="cidade" className="text-sm font-medium text-gray-700">
+              Cidade
+            </label>
+            <select
+              id="cidade"
+              className="flex-1 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 text-sm outline-none cursor-pointer"
+            >
+              <option value="">Selecione a cidade</option>
+              <option value="estancia">Estância</option>
+              <option value="umbauba">Umbaúba</option>
+              <option value="itabaianinha">Itabaianinha</option>
+            </select>
+          </div>
+
+          <div className="pt-1 flex gap-3">
+            <button className="px-4 py-1.5 text-xs border border-gray-200 text-black hover:bg-gray-100 rounded-lg transition-colors cursor-pointer">
+              Cancelar
+            </button>
+            <button className="px-5 py-3 text-xs bg-green-500 hover:bg-green-600 text-white rounded-lg cursor-pointer transition-colors">
+              Salvar
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default CadastrarVendedor;

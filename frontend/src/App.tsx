@@ -1,9 +1,9 @@
-import Vendedores from "./pages/Vendedores/Vendedores";
+import CadastrarVendedor from "./pages/CadastrarVendedor/CadastrarVendedor";
 
 
 function App() {
   return (
-    <Vendedores/>
+    <CadastrarVendedor />
   )
 }
 
