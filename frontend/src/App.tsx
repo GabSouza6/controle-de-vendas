@@ -1,9 +1,9 @@
-import CadastrarVendedor from "./pages/CadastrarVendedor/CadastrarVendedor";
+import AtualizarEstoque from "./components/AtualizarSaldo/AtualizarSaldo";
 
 
 function App() {
   return (
-    <CadastrarVendedor />
+    <AtualizarEstoque />
   )
 }
 

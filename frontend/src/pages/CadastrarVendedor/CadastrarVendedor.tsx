@@ -6,11 +6,6 @@ const CadastrarVendedor = () => {
       <SideBar />
 
       <main className="flex-1 p-8">
-        <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-800 transition-colors cursor-pointer mb-6">
-          <img src="/src/assets/arrow-left.svg" className="w-4 h-4" />
-          Voltar
-        </button>
-
         <header className="mb-6">
           <h1 className="text-2xl font-bold text-gray-800">
             Cadastrar Vendedor
@@ -29,29 +24,35 @@ const CadastrarVendedor = () => {
               type="text"
               id="nome"
               placeholder="Nome completo"
-              className="flex-1 bg-gray-100 border border-gray-200 rounded-lg px-4 py-2 text-sm outline-none"
+              className="flex-1 bg-gray-100 border border-gray-200 rounded-lg px-4 py-2 text-sm outline-none  "
             />
           </div>
 
           <div className="flex flex-col gap-1">
-            <label htmlFor="telefone" className="text-sm font-medium text-gray-700">
+            <label
+              htmlFor="telefone"
+              className="text-sm font-medium text-gray-700"
+            >
               Telefone
             </label>
             <input
               type="text"
               id="telefone"
               placeholder="(00) 00000-0000"
-              className="flex-1 bg-gray-100 border border-gray-200 rounded-lg px-4 py-2 text-sm outline-none"
+              className="flex-1 bg-gray-100 border border-gray-200 rounded-lg px-4 py-2 text-sm outline-none "
             />
           </div>
 
           <div className="flex flex-col gap-1">
-            <label htmlFor="cidade" className="text-sm font-medium text-gray-700">
+            <label
+              htmlFor="cidade"
+              className="text-sm font-medium text-gray-700"
+            >
               Cidade
             </label>
             <select
               id="cidade"
-              className="flex-1 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 text-sm outline-none cursor-pointer"
+              className="flex-1 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 text-sm outline-none cursor-pointer "
             >
               <option value="">Selecione a cidade</option>
               <option value="estancia">Estância</option>
