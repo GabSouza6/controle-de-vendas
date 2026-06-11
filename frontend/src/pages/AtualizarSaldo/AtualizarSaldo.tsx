@@ -2,7 +2,7 @@ import iconFechar from "../../assets/x.svg";
 
 const AtualizarSaldo = () => {
   return (
-    <main className="flex min-h-screen justify-center items-center bg-gray-300">
+    <main className="flex min-h-screen justify-center items-center bg-gray-100">
       <div className="bg-white max-w-100 w-full rounded-2xl p-5">
         <div className="flex justify-between">
           <h3 className="text-sm">Atualizar Estoque</h3>

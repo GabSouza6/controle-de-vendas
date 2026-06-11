@@ -1,17 +1,18 @@
+import { Link } from "react-router-dom";
 import iconSair from "../../assets/sair.svg";
 import iconUser from "../../assets/user.svg";
 import iconDashboard from "../../assets/dashboard.svg";
 import iconVendedores from "../../assets/vendedores.svg";
 
 const SideBar = () => {
-  const NavLink = ({ icon, text }: { icon: string; text: string }) => (
-    <a
-      href="#"
+  const NavLink = ({ icon, text, to }: { icon: string; text: string; to: string }) => (
+    <Link
+      to={to}
       className="flex items-center gap-3 p-3 rounded-lg text-sm text-gray-600 hover:bg-green-100 hover:text-green-600 transition-colors"
     >
       <img src={icon} alt={`Ícone ${text}`} className="w-5 h-5" />
       {text}
-    </a>
+    </Link>
   );
 
   return (
@@ -24,15 +25,15 @@ const SideBar = () => {
         </header>
 
         <nav className="flex-1 flex flex-col gap-2">
-          <NavLink icon={iconDashboard} text="Dashboard" />
-          <NavLink icon={iconVendedores} text="Vendedores" />
+          <NavLink icon={iconDashboard} text="Dashboard" to="/dashboard" />
+          <NavLink icon={iconVendedores} text="Vendedores" to="/vendedores" />
         </nav>
 
         <footer className="flex flex-col gap-4 pt-6 border-t border-gray-200">
-          <button className="flex items-center gap-3 p-2 text-xs text-gray-600 hover:text-red-600 transition-colors cursor-pointer">
+          <Link to="/" className="flex items-center gap-3 p-2 text-xs text-gray-600 hover:text-red-600 transition-colors cursor-pointer">
             <img src={iconSair} alt="Sair" className="w-4 h-4" />
             <span>Sair</span>
-          </button>
+          </Link>
 
           <div className="flex items-center gap-3 p-2">
             <img
