@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import iconFechar from "../../assets/x.svg";
 
 const AtualizarSaldo = () => {
@@ -6,11 +7,9 @@ const AtualizarSaldo = () => {
       <div className="bg-white max-w-100 w-full rounded-2xl p-5">
         <div className="flex justify-between">
           <h3 className="text-sm">Atualizar Estoque</h3>
-          <img
-            src={iconFechar}
-            alt="Icone Fechar"
-            className="w-5 cursor-pointer"
-          />
+          <Link to="/vendedores">
+            <img src={iconFechar} alt="Fechar" className="w-5 cursor-pointer" />
+          </Link>
         </div>
 
         <div className="flex mt-6 gap-40 items-center">

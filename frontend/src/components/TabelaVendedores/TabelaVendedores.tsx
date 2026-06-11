@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import iconCarteira from "../../assets/carteira.svg";
 import iconLixeira from "../../assets/lixeira.svg";
 
@@ -45,13 +46,16 @@ const TabelaVendedores = () => {
               </td>
               <td className="py-4 px-4">
                 <div className="flex items-center gap-2">
-                  <button className="p-1.5 border border-gray-200 rounded-md hover:bg-gray-50 cursor-pointer">
+                  <Link
+                    to="/vendedores/atualizar-saldo"
+                    className="p-1.5 border border-gray-200 rounded-md hover:bg-gray-50 cursor-pointer"
+                  >
                     <img
                       src={iconCarteira}
                       alt="Atualizar saldo"
                       className="w-4 h-4"
                     />
-                  </button>
+                  </Link>
                   <button className="p-1.5 border border-gray-200 rounded-md hover:bg-red-100 cursor-pointer">
                     <img
                       src={iconLixeira}
