@@ -28,7 +28,7 @@ const CadastrarVendedor = () => {
             id="nome"
             placeholder="Nome completo"
             className="bg-gray-100 border border-gray-200 rounded-lg px-4 py-2 text-sm outline-none"
-          />
+          />  
         </div>
 
         <div className="flex flex-col gap-1">

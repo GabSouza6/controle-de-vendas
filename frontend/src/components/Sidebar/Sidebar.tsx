@@ -5,7 +5,15 @@ import iconDashboard from "../../assets/dashboard.svg";
 import iconVendedores from "../../assets/vendedores.svg";
 
 const SideBar = () => {
-  const NavLink = ({ icon, text, to }: { icon: string; text: string; to: string }) => (
+  const NavLink = ({
+    icon,
+    text,
+    to,
+  }: {
+    icon: string;
+    text: string;
+    to: string;
+  }) => (
     <Link
       to={to}
       className="flex items-center gap-3 p-3 rounded-lg text-sm text-gray-600 hover:bg-green-100 hover:text-green-600 transition-colors"
@@ -30,7 +38,10 @@ const SideBar = () => {
         </nav>
 
         <footer className="flex flex-col gap-4 pt-6 border-t border-gray-200">
-          <Link to="/" className="flex items-center gap-3 p-2 text-xs text-gray-600 hover:text-red-600 transition-colors cursor-pointer">
+          <Link
+            to="/"
+            className="flex items-center gap-3 p-2 text-xs text-gray-600 hover:text-red-600 transition-colors cursor-pointer"
+          >
             <img src={iconSair} alt="Sair" className="w-4 h-4" />
             <span>Sair</span>
           </Link>
@@ -38,7 +49,7 @@ const SideBar = () => {
           <div className="flex items-center gap-3 p-2">
             <img
               src={iconUser}
-              alt="Perfil"
+              alt="Foto de perfil do usuário"
               className="w-8 h-8 p-1.5 rounded-full bg-green-100 border border-green-200"
             />
             <div className="flex flex-col overflow-hidden">
