@@ -16,7 +16,7 @@ const Dashboard = () => {
 
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <CardEstatistica titulo="Vendedores" valor={0} descricao="Total de vendedores cadastrados" />
-        <CardEstatistica titulo="Total em Estoque" valor={0} descricao="Quantidade sobrando" />
+        <CardEstatistica titulo="Total em Estoque" valor={0} descricao="Quantidade distribuída" />
         <CardEstatistica titulo="Total Vendido" valor={0} descricao="Unidades vendidas no total" />
       </section>
 

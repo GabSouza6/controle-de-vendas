@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import iconCarteira from "../../assets/carteira.svg";
 import iconLixeira from "../../assets/lixeira.svg";
+import { useState } from "react";
 
-const vendedores = [
+const listaVendedores = [
   { id: "01", nome: "Gabriel Santos", cidade: "Estância", estoque: 50 },
   { id: "02", nome: "Mariana Costa", cidade: "Umbaúba", estoque: 28 },
   { id: "03", nome: "Pedro Alves", cidade: "Itabaianinha", estoque: 40 },
@@ -11,6 +12,12 @@ const vendedores = [
 ];
 
 const TabelaVendedores = () => {
+  const [vendedores, setVendedores] = useState(listaVendedores)
+
+  const deletar = (id: string) => {
+    setVendedores(vendedores.filter((vendedor) => vendedor.id !== id))
+  }
+
   return (
     <div className="bg-white border border-gray-200 rounded-xl">
       <table className="w-full">
@@ -56,7 +63,7 @@ const TabelaVendedores = () => {
                       className="w-4 h-4"
                     />
                   </Link>
-                  <button className="p-1.5 border border-gray-200 rounded-md hover:bg-red-100 cursor-pointer">
+                  <button onClick={() => deletar(item.id)} className="p-1.5 border border-gray-200 rounded-md hover:bg-red-100 cursor-pointer">
                     <img
                       src={iconLixeira}
                       alt="Deletar vendedor"
